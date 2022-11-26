@@ -1,0 +1,17 @@
+{
+  "name": "Mastodon Admin Helper",
+  "version": "0.1",
+  "description": "Adds some useful functionality to mastodon admin pages",
+  "icons": { "128": "images/m128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://sciences.social/admin/*"],
+      "js": ["accounts_content.js"]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "content_security_policy": {"script-src": "self", "object-src": "self"},
+  "manifest_version": 3
+}
